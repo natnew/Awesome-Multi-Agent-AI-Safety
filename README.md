@@ -371,6 +371,7 @@ Planned improvements for this repository may include:
 - **Awesome Agentic Engineering** - A companion list focused on building reliable, observable, production-grade agentic systems.
 - **Awesome LLM Security** - Broader resources on LLM application security.
 - **Awesome AI Evals** - Resources focused specifically on evaluation systems and benchmarks.
+- [APort Agent Guardrails](https://aport.io) - Pre-action authorization guardrails for AI agents and MCP/tool-use workflows.
 
 > Add real links here once the companion repos or related references exist.
 
