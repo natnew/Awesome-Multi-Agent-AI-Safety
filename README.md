@@ -124,6 +124,7 @@ Resources for controlling what agentic systems can do, when they can do it, and 
 - **[Arcade](https://www.arcade.dev/)** - Tool and MCP access platform focused on authorised tool use and lifecycle governance. *Tool governance / commercial*
 - **[E2B](https://e2b.dev/)** - Sandboxed cloud runtime for code-executing agents. *Sandbox / execution isolation*
 - **[Daytona](https://www.daytona.io/)** - Sandbox and environment platform for isolated, reproducible agent execution. *Sandbox / developer infrastructure*
+- **[TWZRD Agent Intel](https://intel.twzrd.xyz)** - On-chain trust scoring and identity verification for AI agent wallets on Solana. Preflight checks and x402 trust receipts for verifying counterparty agents before authorizing tool calls or micropayments. *Counterparty verification / agent identity*
 
 ---
 
