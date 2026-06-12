@@ -1,275 +1,104 @@
-# Awesome AI Safety for Agentic Systems
+# Awesome Multi-Agent AI Safety
 
-> A curated, technically rigorous list of tools, frameworks, papers, benchmarks, patterns, and resources for building, evaluating, and securing agentic AI systems in real-world environments.
+> A curated, technically rigorous list of research, infrastructure, testbeds, and tools for securing systems of interacting AI agents.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![License: CC0](https://img.shields.io/badge/license-CC0%201.0-lightgrey.svg)](./LICENSE)
 
-Agentic systems introduce new classes of risk beyond conventional LLM applications: prompt injection, indirect prompt injection, tool misuse, memory poisoning, unsafe delegation, hidden state corruption, weak approval workflows, and unreliable autonomy under real-world conditions.
+AI agents are increasingly deployed alongside other agents, built and operated by different actors over shared infrastructure. Interacting agent populations introduce risks that no single-agent safeguard addresses: collusion and covert communication, attack propagation between agents, cascading failures, emergent collective capabilities, and trust failures between agents that have no reliable way to identify or commit to one another.
 
-This repository is a production-oriented map of the AI safety stack for agentic systems. It is designed for practitioners, researchers, security teams, platform engineers, governance leaders, and anyone building or evaluating AI systems that reason, plan, act, and use tools.
+This repository is a map of the multi-agent AI safety stack. It is designed for practitioners, researchers, security teams, platform engineers, and governance leaders building or evaluating systems of AI agents that interact.
 
-As of March 20, 2026, the curated sections below contain 121 entries aligned to the repository taxonomy.
+Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-## What this list is for
-
-This list focuses on the practical safety, reliability, and governance challenges introduced by agentic AI systems, including:
-
-- systems that use tools, APIs, filesystems, browsers, code execution, or external services
-- multi-agent systems with delegation, routing, planning, critique, or memory
-- production AI workflows that require approval gates, auditability, and operational safeguards
-- evaluation and red teaming for autonomous or semi-autonomous behaviours
-- design patterns for secure, observable, governable AI execution
-
-## Editorial principles
-
-This is not a generic list of AI tools.
-
-Entries are included because they are relevant to the safe design, evaluation, monitoring, control, or governance of agentic systems. Preference is given to resources that are technically credible, well-documented, practically useful, and meaningfully distinct.
-
-We aim to optimise for:
-
-- depth over hype
-- operational relevance over novelty
-- clarity over category sprawl
-- curation over indiscriminate accumulation
-
-## How to use this list
-
-You can use this repository in several ways:
-
-- **Builders** can find tools, patterns, and frameworks for securing agentic systems
-- **Researchers** can discover papers, benchmarks, and open problems
-- **Security teams** can locate threat models, red-team methods, and defensive controls
-- **Governance and assurance teams** can identify oversight, approval, and audit patterns
-- **Learners** can follow a structured path through the field
+As of June 12, 2026, the curated sections below contain 35 entries aligned to the repository taxonomy.
 
 ## Contents
 
 - [Foundations and framing](#foundations-and-framing)
-- [Threat models and attack surfaces](#threat-models-and-attack-surfaces)
-- [Prompt injection and context manipulation](#prompt-injection-and-context-manipulation)
-- [Tool use, permissions, and execution boundaries](#tool-use-permissions-and-execution-boundaries)
-- [Memory safety and context integrity](#memory-safety-and-context-integrity)
-- [Guardrails and policy enforcement](#guardrails-and-policy-enforcement)
-- [Evaluations, red teaming, and stress testing](#evaluations-red-teaming-and-stress-testing)
-- [Observability, tracing, and forensics](#observability-tracing-and-forensics)
-- [Human oversight, approvals, and governance](#human-oversight-approvals-and-governance)
-- [Benchmarks, datasets, and test suites](#benchmarks-datasets-and-test-suites)
-- [Reference architectures and engineering patterns](#reference-architectures-and-engineering-patterns)
-- [Papers, essays, and research programmes](#papers-essays-and-research-programmes)
-- [Courses, guides, and learning resources](#courses-guides-and-learning-resources)
+- [Threat models and attacks](#threat-models-and-attacks)
+- [Agent identity, trust, and interaction infrastructure](#agent-identity-trust-and-interaction-infrastructure)
+- [Oversight and control of agent populations](#oversight-and-control-of-agent-populations)
+- [Multi-agent environments and simulation testbeds](#multi-agent-environments-and-simulation-testbeds)
+- [Multi-agent frameworks and orchestration](#multi-agent-frameworks-and-orchestration)
 - [Communities, organisations, and ongoing work](#communities-organisations-and-ongoing-work)
 - [Contributing](#contributing)
-- [Inclusion criteria](#inclusion-criteria)
 - [License](#license)
 
 ---
 
 ## Foundations and framing
 
-High-level resources that define the problem space, core concepts, and emerging safety model for agentic systems.
+High-level resources that define the multi-agent safety problem space and its research agenda.
 
-- **[NIST AI RMF 1.0](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)** - Foundational risk-management framework for governing, measuring, and managing AI systems. *Framework / governance*
-- **[NIST Generative AI Profile (AI 600-1)](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence)** - Companion profile for applying the AI RMF to generative AI systems. *Framework / generative AI*
-- **[NIST AI RMF Playbook](https://www.nist.gov/itl/ai-risk-management-framework/nist-ai-rmf-playbook)** - Operational guidance for turning AI RMF principles into concrete engineering and governance actions. *Playbook / implementation*
-- **[NIST AI Resource Center](https://airc.nist.gov/)** - NIST hub for AI RMF operationalisation, TEVV resources, and supporting materials. *Reference / implementation*
-- **[OpenAI Preparedness Framework](https://openai.com/index/updating-our-preparedness-framework/)** - OpenAI's current framework for assessing and mitigating severe frontier-model risks. *Lab policy / risk management*
-- **[OpenAI Model Spec](https://openai.com/index/sharing-the-latest-model-spec/)** - Public specification for desired model behaviour, chain of command, and safety trade-offs. *Model behaviour / alignment*
-- **[Anthropic Responsible Scaling Policy](https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy)** - Public governance framework tying stronger safeguards to stronger model capabilities. *Lab policy / catastrophic risk*
-- **[Anthropic Frontier Safety Roadmap](https://www.anthropic.com/responsible-scaling-policy/roadmap)** - Public roadmap for future security, safeguards, alignment, and policy work. *Roadmap / preparedness*
+- **[Open Challenges in Multi-Agent Security](https://arxiv.org/abs/2505.02077)** - Field-defining survey of securing networks of decentralised agents, taxonomising threats from secret collusion to swarm attacks and setting a unified research agenda. *Survey / field agenda*
+- **[Multi-Agent Risks from Advanced AI](https://arxiv.org/abs/2502.14143)** - Cooperative AI Foundation report mapping miscoordination, conflict, and collusion failure modes alongside seven cross-cutting risk factors. *Report / risk taxonomy*
+- **[Open Problems in Cooperative AI](https://arxiv.org/abs/2012.08630)** - Foundational agenda for building AI systems that cooperate safely with other machines and humans. *Paper / foundational*
+- **[Distributional AGI Safety](https://arxiv.org/abs/2512.16856)** - Google DeepMind work on general capability emerging from coordinated networks of specialised agents, and the safeguards that hypothesis demands. *Paper / collective capability*
+- **[Virtual Agent Economies](https://arxiv.org/abs/2509.10147)** - Framework for analysing and governing emergent economies of transacting AI agents, including systemic-risk concerns. *Paper / agent economies*
 
 ---
 
-## Threat models and attack surfaces
+## Threat models and attacks
 
-Resources that map how agentic systems fail or are exploited in practice.
+Resources that map how interacting agent systems fail or are exploited: inter-agent attack vectors, collusion, and structural vulnerabilities.
 
-- **[OWASP GenAI Security Project](https://genai.owasp.org/)** - Broad security programme covering LLM and agentic application risks, controls, and community resources. *Security / taxonomy*
-- **[OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)** - Baseline risk taxonomy for LLM systems that still applies to many agentic stacks. *Threat model / foundational*
-- **[OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)** - Agent-specific risk catalogue focused on delegation, tools, autonomy, and hidden state. *Threat model / agentic*
-- **[OWASP Agentic Security Initiative](https://genai.owasp.org/initiatives/agentic-security-initiative/)** - OWASP initiative focused on practical methods for securing agent-based systems. *Community / threat research*
-- **[MITRE ATLAS](https://atlas.mitre.org/)** - Adversary knowledge base for attacks against AI systems and AI-enabled operations. *Adversary framework / defence mapping*
-- **[NIST CAISI](https://www.nist.gov/caisi)** - NIST's Center for AI Standards and Innovation, relevant for evaluation and standards coordination. *Standards / measurement*
-- **[Google Secure AI Framework (SAIF)](https://saif.google/)** - Security framework for secure-by-design AI systems across deployment and operational boundaries. *Security framework / design*
-- **[Amazon Bedrock Prompt Injection Security](https://docs.aws.amazon.com/en_us/bedrock/latest/userguide/prompt-injection.html)** - AWS guidance on the shared-responsibility model and prompt-injection threat surface for agentic applications. *Threat model / cloud guidance*
-
----
-
-## Prompt injection and context manipulation
-
-Resources focused on attacks that exploit model instructions, retrieved content, tool-facing prompts, and indirect prompt channels.
-
-- **[Prompt Shields in Azure AI Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection)** - Microsoft service for detecting adversarial user prompts and malicious document content before model execution. *Detection / managed service*
-- **[Lakera PINT Benchmark](https://www.lakera.ai/blog/lakera-pint-benchmark)** - Benchmark for evaluating prompt-injection detection systems on realistic attack and false-positive cases. *Benchmark / prompt injection*
-- **[Rebuff](https://github.com/protectai/rebuff)** - Early open-source prompt-injection defence reference with canary-token and retrieval-based detection ideas. *Open-source / reference implementation*
-- **[Prompt Guard](https://huggingface.co/meta-llama/Prompt-Guard-86M)** - Meta model for classifying prompt-injection and jailbreak content. *Classifier / prompt defence*
-- **[WAInjectBench](https://github.com/Norrrrrrr-lyn/WAInjectBench)** - Benchmark for prompt-injection detection in web agents across text and image attack channels. *Benchmark / web agents*
-- **[Guardrails Detect Prompt Injection](https://github.com/guardrails-ai/detect_prompt_injection)** - Guardrails validator for screening suspected injection attempts in user input. *Validator / runtime defence*
-- **[Spotlighting for Indirect Prompt Injection Defence](https://www.microsoft.com/en-us/research/publication/defending-against-indirect-prompt-injection-attacks-with-spotlighting/)** - Microsoft Research paper on provenance signalling to reduce indirect prompt-injection success. *Research / defensive pattern*
-- **[Assessing Prompt Injection Risks in 200+ Custom GPTs](https://arxiv.org/abs/2311.11538)** - Empirical study of prompt extraction and file leakage against user-customised GPTs. *Paper / empirical security*
+- **[OWASP Multi-Agentic System Threat Modeling Guide](https://genai.owasp.org/resource/multi-agentic-system-threat-modeling-guide-v1-0/)** - Applies OWASP's agentic threat taxonomy to real-world multi-agent systems through MAESTRO-based worked examples. *Threat modelling / practitioner guide*
+- **[Extending the OWASP Multi-Agentic System Threat Modeling Guide](https://arxiv.org/abs/2508.09815)** - Research-driven extensions to the OWASP guide informed by multi-agent security findings. *Paper / threat modelling*
+- **[MAESTRO](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)** - Cloud Security Alliance seven-layer threat-modelling framework built specifically for agentic and multi-agent AI systems. *Threat modelling / framework*
+- **[Architecture Matters for Multi-Agent Security](https://arxiv.org/abs/2604.23459)** - Analysis of how multi-agent system architecture and topology choices shape security properties and attack surfaces. *Paper / architecture*
+- **[Secret Collusion among AI Agents](https://arxiv.org/abs/2402.07510)** - Evaluations and safeguards for steganographic collusion between generative agents. *Paper / covert communication*
+- **[Prompt Infection](https://arxiv.org/abs/2410.07283)** - LLM-to-LLM prompt injection that propagates between agents in multi-agent systems, with a tagging defence. *Paper / attack propagation*
+- **[Agents of Chaos](https://arxiv.org/abs/2602.20021)** - Large red-teaming study of deployed autonomous agents documenting identity spoofing, compliance with non-owners, and destructive system-level actions. *Paper / red teaming*
 
 ---
 
-## Tool use, permissions, and execution boundaries
+## Agent identity, trust, and interaction infrastructure
 
-Resources for controlling what agentic systems can do, when they can do it, and under what conditions.
+Resources on the primitives that trustworthy agent-to-agent interaction depends on: identity, authentication, delegation, provenance, and reputation.
 
-- **[Model Context Protocol Intro](https://modelcontextprotocol.io/docs/getting-started/intro)** - Intro to MCP as the standard interface for tool, prompt, and resource exposure. *Protocol / ecosystem*
-- **[Model Context Protocol Specification](https://modelcontextprotocol.io/specification/2025-06-18)** - Formal protocol specification for interoperable model-to-tool and model-to-resource integration. *Specification / compatibility*
-- **[MCP Authorization Specification](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization)** - Authorization model for securing MCP server access and delegated tool use. *Authorization / protocol security*
-- **[Open Policy Agent](https://www.openpolicyagent.org/)** - General-purpose policy engine useful for explicit allow/deny checks around agent actions. *Policy engine / enforcement*
-- **[Cedar Policy](https://www.cedarpolicy.com/)** - Policy language for fine-grained, auditable authorisation decisions in tool-rich systems. *Policy language / permissions*
-- **[Arcade](https://www.arcade.dev/)** - Tool and MCP access platform focused on authorised tool use and lifecycle governance. *Tool governance / commercial*
-- **[E2B](https://e2b.dev/)** - Sandboxed cloud runtime for code-executing agents. *Sandbox / execution isolation*
-- **[Daytona](https://www.daytona.io/)** - Sandbox and environment platform for isolated, reproducible agent execution. *Sandbox / developer infrastructure*
+- **[A2A Protocol](https://a2a-protocol.org/latest/)** - Linux Foundation open standard for secure communication and task delegation between agents from different vendors. *Protocol / interoperability*
+- **[Threat Modeling the A2A Protocol](https://cloudsecurityalliance.org/blog/2025/04/30/threat-modeling-google-s-a2a-protocol-with-the-maestro-framework)** - Cloud Security Alliance analysis of agent-to-agent protocol risks using the MAESTRO framework. *Threat model / protocol security*
+- **[IDs for AI Systems](https://arxiv.org/abs/2406.12137)** - Proposal for instance-level identifiers that support accountability, certification checks, and incident attribution. *Paper / identity*
+- **[Infrastructure for AI Agents](https://arxiv.org/abs/2501.10114)** - Technical systems and protocols for attributing agent actions, shaping interactions, and detecting harmful behaviour. *Paper / infrastructure*
+- **[Authenticated Delegation and Authorized AI Agents](https://arxiv.org/abs/2501.09674)** - OAuth and OpenID Connect extensions for scoped delegation to agents with clear chains of accountability. *Paper / authentication*
+- **[Scaling Trust](https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/)** - ARIA programme building open tooling and foundational research for secure coordination between agents in adversarial settings. *Research programme / coordination*
 
 ---
 
-## Memory safety and context integrity
+## Oversight and control of agent populations
 
-Resources focused on the safety of persistent state, retrieved memory, and mutable system context.
+Methods for detecting, attributing, and intervening on unsafe behaviour across deployed agents, designed to stay robust when agents actively evade them.
 
-- **[Letta](https://github.com/letta-ai/letta)** - Stateful agent framework centred on explicit memory blocks and long-lived agent state. *Memory system / stateful agents*
-- **[Mem0](https://github.com/mem0ai/mem0)** - Memory layer for extracting, storing, and retrieving long-term conversational facts. *Memory layer / personalization*
-- **[LangMem](https://github.com/langchain-ai/langmem)** - Toolkit for memory extraction, consolidation, and long-term adaptation. *Memory tooling / open-source*
-- **[Zep](https://github.com/getzep/zep)** - Memory store and retrieval layer for production conversational and agent systems. *Memory service / production*
-- **[Graphiti](https://github.com/getzep/graphiti)** - Temporal knowledge-graph architecture for agent memory with provenance and historical querying. *Knowledge graph / memory integrity*
-- **[MemGPT](https://arxiv.org/abs/2310.08560)** - Paper on structured memory management for long-horizon agents. *Paper / memory architecture*
-- **[PoisonedRAG](https://github.com/sleeepeer/PoisonedRAG)** - Research repo for knowledge-corruption attacks against RAG pipelines. *Security research / memory poisoning*
-- **[MM-PoisonRAG](https://github.com/HyeonjeongHa/MM-PoisonRAG)** - Multimodal RAG poisoning work showing how text and image stores can corrupt downstream behaviour. *Security research / multimodal memory*
+- **[AI Control: Improving Safety Despite Intentional Subversion](https://arxiv.org/abs/2312.06942)** - Control protocols that stay safe even when capable models actively try to subvert oversight. *Paper / control*
+- **[ControlArena](https://github.com/UKGovernmentBEIS/control-arena)** - UK AISI library for designing and running AI control experiments that test protocols against subversion. *Open-source / control evaluations*
+- **[SHADE-Arena](https://www.anthropic.com/research/shade-arena-sabotage-monitoring)** - Evaluation environment measuring whether agents can pursue hidden sabotage goals while evading an AI monitor. *Evaluation / sabotage and monitoring*
 
 ---
 
-## Guardrails and policy enforcement
+## Multi-agent environments and simulation testbeds
 
-Resources for defining and enforcing behavioural constraints in agentic systems.
+Reproducible environments for studying how populations of agents behave, cooperate, and fail at scale.
 
-- **[NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails)** - Open framework for safety, topical, and execution guardrails around LLM applications and agents. *Open-source / runtime control*
-- **[Guardrails AI](https://github.com/guardrails-ai/guardrails)** - Validation framework for constraining inputs, outputs, and structured agent responses. *Open-source / validation*
-- **[Guardrails Hub](https://hub.guardrailsai.com/)** - Registry of reusable validators, checks, and guardrail components. *Validator ecosystem / reusable rules*
-- **[Llama Guard](https://github.com/meta-llama/PurpleLlama/tree/main/Llama-Guard)** - Meta's safety classifier for filtering unsafe prompt and response content. *Classifier / content safety*
-- **[ShieldGemma](https://ai.google.dev/responsible/docs/safeguards/shieldgemma)** - Google's open safety classifiers for text and image safety evaluation. *Open model / safeguards*
-- **[Amazon Bedrock Guardrails](https://docs.aws.amazon.com/en_us/bedrock/latest/userguide/guardrails.html)** - Managed guardrail layer for harmful content, denied topics, sensitive data, and prompt attacks. *Managed guardrails / cloud platform*
-- **[Amazon Bedrock Automated Reasoning Checks](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html)** - Formal-policy validation for auditable response checking against structured rules. *Policy validation / formal methods*
-- **[LLM Guard](https://github.com/protectai/llm-guard)** - Open-source sanitisation and detection toolkit for prompt, output, and content risks. *Open-source / defensive controls*
-
----
-
-## Evaluations, red teaming, and stress testing
-
-Resources for testing agentic systems under failure, manipulation, and adversarial pressure.
-
-- **[Promptfoo](https://github.com/promptfoo/promptfoo)** - Evaluation and red-teaming framework for prompts, agents, and RAG systems. *Open-source / red teaming*
-- **[PyRIT](https://github.com/Azure/PyRIT)** - Python toolkit for automated AI red teaming and adversarial safety evaluation. *Open-source / red teaming*
-- **[Counterfit](https://github.com/Azure/counterfit)** - Security automation tool for assessing AI model vulnerability and attack surface. *Open-source / adversarial testing*
-- **[garak](https://github.com/NVIDIA/garak)** - LLM vulnerability scanner focused on jailbreaks, prompt attacks, leakage, and unsafe behaviours. *Open-source / scanner*
-- **[Giskard](https://github.com/Giskard-AI/giskard)** - Testing platform for model quality, hallucination, and safety checks. *Open-source / testing*
-- **[Inspect](https://inspect.aisi.org.uk/)** - UK AISI evaluation framework for structured, reproducible testing of models and agents. *Open-source / evaluation harness*
-- **[OpenAI Evals](https://github.com/openai/evals)** - OpenAI's framework for building and running custom model evaluations. *Open-source / eval framework*
-- **[DeepEval](https://github.com/confident-ai/deepeval)** - LLM evaluation framework for quality, safety, and regression testing in CI. *Open-source / CI-friendly*
+- **[Concordia](https://github.com/google-deepmind/concordia)** - Google DeepMind library for generative agent-based models simulating agent interactions in grounded social and digital environments. *Environment / generative ABM*
+- **[Melting Pot](https://github.com/google-deepmind/meltingpot)** - Test-scenario suite measuring how multi-agent populations generalise to novel social situations and unfamiliar co-players. *Environment / multi-agent RL*
+- **[OASIS](https://github.com/camel-ai/oasis)** - Open social-media simulator supporting up to one million LLM-driven agents for studying population-scale dynamics. *Simulator / population scale*
+- **[GovSim](https://arxiv.org/abs/2404.16698)** - Shared-resource simulation showing when societies of LLM agents achieve or fail at sustainable cooperation. *Environment / cooperation*
+- **[Generative Agents](https://arxiv.org/abs/2304.03442)** - Foundational simulation of a believable agent society with memory, planning, and reflection. *Paper / agent societies*
+- **[Generative Agent Simulations of 1,000 People](https://arxiv.org/abs/2411.10109)** - Stanford architecture simulating the attitudes and behaviours of 1,052 real individuals from qualitative interviews, a foundation for human-grounded simulation. *Paper / human-grounded simulation*
+- **[SocioVerse](https://arxiv.org/abs/2504.10157)** - World model for social simulation aligning LLM agent populations with a pool of ten million real-world user profiles. *Simulator / population realism*
 
 ---
 
-## Observability, tracing, and forensics
+## Multi-agent frameworks and orchestration
 
-Resources for making agentic systems inspectable before, during, and after execution.
+Frameworks for building multi-agent systems with bounded, observable collaboration patterns.
 
-- **[Langfuse](https://github.com/langfuse/langfuse)** - Open-source observability, evals, and prompt-management platform for LLM systems. *Open-source / production*
-- **[LangSmith](https://www.langchain.com/langsmith)** - Tracing, evaluation, and debugging platform for agent workflows. *Tracing / commercial*
-- **[Braintrust](https://braintrust.dev/)** - Evaluation and observability platform for measuring model and agent quality. *Evals / production*
-- **[Arize Phoenix](https://github.com/Arize-ai/phoenix)** - Open-source observability for tracing, evals, and troubleshooting LLM pipelines. *Open-source / observability*
-- **[W&B Weave](https://wandb.ai/site/weave/)** - Tracking and evaluation toolkit for prompts, model calls, and agent traces. *Tracing / experiments*
-- **[Helicone](https://github.com/Helicone/helicone)** - Proxy and analytics layer for monitoring LLM traffic, latency, and cost. *Gateway / observability*
-- **[OpenLLMetry](https://github.com/traceloop/openllmetry)** - OpenTelemetry instrumentation for LLM and agent spans. *Tracing / open standards*
-- **[OpenTelemetry](https://opentelemetry.io/)** - Vendor-neutral telemetry standard for traces, metrics, and logs in agent infrastructure. *Standard / observability*
-
----
-
-## Human oversight, approvals, and governance
-
-Resources that place meaningful human review and organisational accountability around agentic systems.
-
-- **[AISIC](https://www.nist.gov/artificial-intelligence/artificial-intelligence-safety-institute-consortium-aisic)** - NIST consortium coordinating AI safety measurement, testing, and guidance across stakeholders. *Consortium / governance*
-- **[AISIC Working Groups](https://www.nist.gov/artificial-intelligence/artificial-intelligence-safety-institute-consortium-aisic/aisic-working)** - Working groups on risk management, testing, provenance, and related safety topics. *Working groups / coordination*
-- **[International Network of AI Safety Institutes](https://www.commerce.gov/news/fact-sheets/2024/11/fact-sheet-us-department-commerce-us-department-state-launch-international)** - International coordination effort on testing, risk assessments, and safety science. *International coordination / assurance*
-- **[AI Verify Foundation](https://aiverifyfoundation.sg/)** - Singapore-based initiative for practical AI assurance tooling and ecosystem development. *Assurance / governance*
-- **[OECD AI Principles](https://oecd.ai/en/ai-principles)** - International principles for trustworthy AI governance and accountability. *Governance principles / international*
-- **[ISO/IEC 42001](https://www.iso.org/standard/42001)** - International AI management-system standard for organisational governance and controls. *Standard / management system*
-- **[Anthropic ISO 42001 Certification](https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai)** - Example of third-party governance assurance applied to frontier AI development. *Assurance / case study*
-- **[OpenAI Safety in Building Agents](https://platform.openai.com/docs/guides/agent-builder-safety)** - Practical guide to approvals, guardrails, structured outputs, and trace grading in agent workflows. *Operational guidance / approvals*
-
----
-
-## Benchmarks, datasets, and test suites
-
-Resources for measuring the safety, reliability, and robustness of agentic systems.
-
-- **[GAIA](https://gaiabenchmark.com/)** - General assistant benchmark focused on real-world, tool-using, multi-step tasks. *Benchmark / general agents*
-- **[AgentBench](https://github.com/THUDM/AgentBench)** - Multi-environment benchmark for LLM agents acting in OS, web, database, and other settings. *Benchmark / multi-environment*
-- **[WebArena](https://github.com/web-arena-x/webarena)** - Benchmark for autonomous web agents in realistic browser tasks. *Benchmark / web agents*
-- **[VisualWebArena](https://github.com/web-arena-x/visualwebarena)** - Multimodal extension of WebArena for visually grounded web interaction. *Benchmark / multimodal web agents*
-- **[WorkArena](https://github.com/ServiceNow/WorkArena)** - Enterprise workflow benchmark built on ServiceNow tasks. *Benchmark / enterprise agents*
-- **[BrowserGym](https://github.com/ServiceNow/BrowserGym)** - Browser-agent environment and evaluation toolkit for web interaction tasks. *Environment / browser control*
-- **[OSWorld](https://os-world.github.io/)** - Benchmark for agents operating in full desktop environments. *Benchmark / computer use*
-- **[SWE-bench](https://github.com/SWE-bench/SWE-bench)** - Real-world software engineering benchmark based on GitHub issues and tests. *Benchmark / coding agents*
-- **[AgentHarm](https://huggingface.co/datasets/ai-safety-institute/AgentHarm)** - Safety benchmark focused on harmful and misuse-prone agent behaviour. *Safety benchmark / harmful autonomy*
-- **[Tau-bench](https://github.com/sierra-research/tau-bench)** - Customer-service and operational benchmark for practical tool-using agents. *Benchmark / enterprise realism*
-- **[ToolSandbox](https://github.com/apple/ToolSandbox)** - Benchmark and environment for evaluating tool-using LLM agents. *Benchmark / tool use*
-- **[AssistantBench](https://assistantbench.github.io/)** - Benchmark for long, realistic, time-consuming web tasks. *Benchmark / realistic tasks*
-- **[Mind2Web](https://github.com/OSU-NLP-Group/Mind2Web)** - Dataset and benchmark for generalist web navigation and action planning. *Dataset / web agents*
-- **[WebLINX](https://github.com/McGill-NLP/weblinx)** - Large benchmark of real user web interactions for training and evaluating agents. *Dataset / web interaction*
-- **[ToolTalk](https://github.com/microsoft/ToolTalk)** - Benchmark for conversational tool-use correctness across multi-turn settings. *Benchmark / tool calling*
-- **[CRMArena](https://github.com/SalesforceAIResearch/CRMArena)** - Benchmark for realistic CRM workflows and business-task agents. *Benchmark / business agents*
-- **[ToolBench](https://github.com/OpenBMB/ToolBench)** - Large-scale tool-learning dataset and evaluation platform for real-world APIs. *Dataset / tool learning*
-
----
-
-## Reference architectures and engineering patterns
-
-Patterns and example designs for building safe, production-grade agentic systems.
-
-- **[OpenAI Agents SDK (Python)](https://github.com/openai/openai-agents-python)** - Lightweight production SDK with tools, handoffs, guardrails, and tracing. *Framework / orchestration*
-- **[OpenAI Agents SDK (JS)](https://github.com/openai/openai-agents-js)** - TypeScript SDK for tool-using, handoff-capable, traceable agent systems. *Framework / orchestration*
-- **[LangGraph](https://github.com/langchain-ai/langgraph)** - Stateful graph-based orchestration for multi-step and multi-agent workflows. *Framework / state machines*
-- **[Semantic Kernel](https://github.com/microsoft/semantic-kernel)** - Microsoft orchestration SDK with planning, processes, memory, and enterprise patterns. *Framework / enterprise*
-- **[PydanticAI](https://github.com/pydantic/pydantic-ai)** - Agent framework built around typed contracts, validation, and explicit tool boundaries. *Framework / typed interfaces*
-- **[Google ADK](https://google.github.io/adk-docs/)** - Agent Development Kit for building modular, deployable agents with tool integrations. *Framework / platform*
 - **[AutoGen](https://github.com/microsoft/autogen)** - Conversational multi-agent framework for bounded collaboration patterns. *Framework / multi-agent*
 - **[AG2](https://github.com/ag2ai/ag2)** - Successor ecosystem for AutoGen-style collaborative agents and workflows. *Framework / multi-agent*
-- **[LiteLLM](https://github.com/BerriAI/litellm)** - Model gateway layer useful for standardising policy, routing, logging, and spend control. *Gateway / control plane*
-- **[OpenHands](https://github.com/OpenHands/OpenHands)** - Open software-agent platform useful for studying coding-agent execution and control patterns. *Framework / coding agents*
-
----
-
-## Papers, essays, and research programmes
-
-Important technical and conceptual work shaping the field.
-
-- **[ReAct](https://arxiv.org/abs/2210.03629)** - Reasoning-plus-acting pattern that shaped modern tool-using agents. *Foundational paper / agent loops*
-- **[Toolformer](https://arxiv.org/abs/2302.04761)** - Early work on self-supervised tool use for language models. *Foundational paper / tool learning*
-- **[CAMEL](https://arxiv.org/abs/2303.17760)** - Role-playing multi-agent framework and benchmark paper. *Multi-agent / coordination*
-- **[Reflexion](https://arxiv.org/abs/2303.11366)** - Verbal self-feedback method for iterative improvement and recovery. *Reflection / adaptation*
-- **[Self-Refine](https://arxiv.org/abs/2303.17651)** - Self-critique and revision method for stronger outputs without extra training. *Iteration / self-improvement*
-- **[Generative Agents](https://arxiv.org/abs/2304.03442)** - Memory, planning, and reflection architecture for believable long-running agents. *Memory / simulation*
-- **[Tree of Thoughts](https://arxiv.org/abs/2305.10601)** - Search-based reasoning approach for branching deliberation. *Reasoning / search*
-- **[Plan-and-Solve Prompting](https://arxiv.org/abs/2305.04091)** - Explicit planning pattern for more reliable multi-step execution. *Planning / prompting*
-- **[Voyager](https://arxiv.org/abs/2305.16291)** - Lifelong embodied agent with skill library accumulation. *Embodied agents / continual learning*
-- **[ToolLLM](https://arxiv.org/abs/2307.16789)** - Large-scale open work on training agents to use thousands of real APIs. *Tool use / open training data*
-
----
-
-## Courses, guides, and learning resources
-
-High-quality educational resources for understanding and applying AI safety in agentic contexts.
-
-- **[Anthropic: Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)** - Clear engineering guide to practical agent patterns, decomposition, and tool use. *Guide / engineering*
-- **[OpenAI Cookbook](https://cookbook.openai.com/)** - Official examples and recipes for building and evaluating agentic applications. *Examples / official cookbook*
-- **[OpenAI Agents SDK Quickstart](https://openai.github.io/openai-agents-python/quickstart/)** - Hands-on introduction to building multi-agent workflows with traces and tools. *Quickstart / official docs*
-- **[Google ADK Docs](https://google.github.io/adk-docs/)** - Official documentation for ADK concepts, tools, deployment, and MCP integration. *Docs / framework*
-- **[Microsoft AI Red Teaming 101](https://learn.microsoft.com/en-us/security/ai-red-team/training)** - Practical training series on attacking and defending generative AI systems. *Training / red teaming*
-- **[NeMo Guardrails Docs](https://docs.nvidia.com/nemo-guardrails/index.html)** - Official documentation and tutorials for deploying safety and topical guardrails. *Docs / guardrails*
+- **[LangGraph](https://github.com/langchain-ai/langgraph)** - Stateful graph-based orchestration for multi-step and multi-agent workflows. *Framework / state machines*
+- **[CAMEL](https://arxiv.org/abs/2303.17760)** - Early role-playing framework for studying coordination and emergent behaviour between communicating agents. *Paper / coordination*
 
 ---
 
@@ -277,65 +106,9 @@ High-quality educational resources for understanding and applying AI safety in a
 
 Groups, labs, organisations, and ecosystems doing relevant work.
 
-- **[Apollo Research](https://www.apolloresearch.ai/)** - Research group focused on deceptive behaviour, scheming, and evaluation of frontier AI systems. *Research organisation / evaluations*
-- **[METR](https://metr.org/)** - Nonprofit focused on agent capability measurement, threat research, and public reporting. *Research organisation / evaluations*
-- **[UK AI Security Institute](https://www.aisi.gov.uk/)** - UK government institute for testing, measurement, and safeguards research; renamed from the AI Safety Institute on February 14, 2025. *Government lab / safety science*
-- **[MLCommons AILuminate](https://mlcommons.org/ailuminate/)** - Safety benchmarking effort for general-purpose AI systems. *Benchmark ecosystem / standards*
-- **[Frontier Model Forum](https://frontiermodelforum.org/)** - Industry forum for frontier-model safety, governance, and standards work. *Industry coordination / governance*
-- **[AISI Alignment Project](https://alignmentproject.aisi.gov.uk/)** - Funding programme for alignment research led by the UK AI Security Institute. *Research programme / funding*
-
----
-
-## Entry format
-
-To keep the list readable and consistent, use the following format for entries:
-
-- **[Name](link)** - One-sentence description. *Optional metadata: open-source/commercial, maturity, best-for tag.*
-
-### Example
-
-- **[Langfuse](https://github.com/langfuse/langfuse)** - Observability and tracing platform for LLM and agent workflows, useful for debugging, evaluation, and auditability. *Open-source / production-oriented*
-- **[OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)** - Security risk taxonomy for LLM systems that provides a useful baseline for agentic threat modelling. *Foundational / security*
-- **[Inspect](https://inspect.aisi.org.uk/)** - Evaluation framework for structured testing of model and agent behaviour. *Evaluation / research-to-practice*
-
----
-
-## Inclusion criteria
-
-An entry should usually satisfy several of the following:
-
-- directly relevant to the safety, evaluation, control, or governance of agentic systems
-- technically credible
-- documented sufficiently to be usable
-- actively maintained or historically important
-- meaningfully distinct from other entries
-- useful for practitioners, not only marketers
-
-We may exclude entries that are:
-
-- thinly documented
-- redundant
-- overly promotional
-- vague in scope
-- not materially relevant to agentic systems
-
----
-
-## Contribution philosophy
-
-Contributions are welcome, but curation matters.
-
-Please prefer quality over quantity. A smaller number of well-chosen entries with clear descriptions is more valuable than an inflated list.
-
-When contributing, please aim to include:
-
-- the resource name
-- the link
-- a concise and accurate description
-- the most appropriate section
-- a brief note on why it matters
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full contribution process.
+- **[Cooperative AI Foundation](https://www.cooperativeai.com/)** - Charity funding and coordinating research on safe cooperation between AI systems and with humans. *Research funder / cooperation*
+- **[Redwood Research](https://www.redwoodresearch.org/)** - Nonprofit focused on AI control, threat assessment, and mitigations for intentionally misaligned systems. *Research organisation / control*
+- **[UK AI Security Institute](https://www.aisi.gov.uk/)** - UK government institute for testing, measurement, and safeguards research, including AI control evaluations. *Government lab / safety science*
 
 ---
 
@@ -354,36 +127,13 @@ Suggested improvements include:
 
 ---
 
-## Roadmap
-
-Planned improvements for this repository may include:
-
-- resource tags for `open-source`, `enterprise`, `research`, `benchmark`, and `experimental`
-- essential-reading markers for standout resources
-- architecture diagrams for safe agent design patterns
-- a companion taxonomy for agentic threat models
-- a separate section for incident response and post-deployment assurance
-
----
-
 ## Related repositories
 
-- **Awesome Agentic Engineering** - A companion list focused on building reliable, observable, production-grade agentic systems.
-- **Awesome LLM Security** - Broader resources on LLM application security.
-- **Awesome AI Evals** - Resources focused specifically on evaluation systems and benchmarks.
-
-> Add real links here once the companion repos or related references exist.
+- **[Awesome LLM Security](https://github.com/corca-ai/awesome-llm-security)** - Broader resources on LLM application security, including single-agent defence.
+- **[Awesome MCP Security](https://github.com/Puliczek/awesome-mcp-security)** - Curated resources on Model Context Protocol security.
 
 ---
 
 ## License
 
 This work is licensed under [CC0 1.0](./LICENSE), unless stated otherwise.
-
----
-
-## Maintainer
-
-Curated by **[Your Name / GitHub Handle]**.
-
-This repository aims to be a technically serious, practically useful map of AI safety for agentic systems. Thoughtful contributions, corrections, and improvements are welcome.

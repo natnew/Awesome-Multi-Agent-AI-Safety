@@ -8,7 +8,7 @@ This repository is curated rather than exhaustive. Please optimise for relevance
 
 Good additions usually meet several of these criteria:
 
-- directly relevant to the safety, evaluation, control, observability, or governance of agentic systems
+- directly relevant to the safety, evaluation, control, observability, or governance of multi-agent AI systems — interacting agent populations, the infrastructure they rely on, or their collective behaviour
 - technically credible
 - documented well enough for a practitioner to use
 - actively maintained or historically important
@@ -19,6 +19,7 @@ Good additions usually meet several of these criteria:
 Please avoid submitting entries that are:
 
 - generic AI tooling with no clear safety or control relevance
+- single-agent safety content (prompt-injection defence, guardrails, sandboxing, individual-agent benchmarks) with no multi-agent relevance
 - duplicate or near-duplicate with existing entries
 - primarily marketing pages with little technical detail
 - stale, abandoned, or thinly documented unless historically important
@@ -34,7 +35,7 @@ Keep descriptions:
 - concise
 - technically precise
 - neutral in tone
-- focused on why the resource matters for agentic AI safety
+- focused on why the resource matters for multi-agent AI safety
 
 ## Placement
 

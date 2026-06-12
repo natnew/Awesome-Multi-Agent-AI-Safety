@@ -1,0 +1,51 @@
+name: Resource radar
+
+on:
+  schedule:
+    # First day of every month at 07:00 UTC
+    - cron: "0 7 1 * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  open-sweep-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open monthly curation sweep issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const now = new Date();
+            const month = now.toLocaleString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+            const body = [
+              `Monthly sweep for new resources worth curating. Check each source, add candidate entries as comments on this issue, then close it once triaged.`,
+              ``,
+              `## Research`,
+              `- [ ] [arXiv: multi-agent systems](https://arxiv.org/list/cs.MA/recent) - new cs.MA submissions`,
+              `- [ ] [arXiv search: multi-agent security](https://arxiv.org/search/?searchtype=all&query=multi-agent+security)`,
+              `- [ ] [Cooperative AI Foundation](https://www.cooperativeai.com/)`,
+              `- [ ] [ARIA Scaling Trust programme](https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/)`,
+              `- [ ] [Redwood Research](https://www.redwoodresearch.org/)`,
+              ``,
+              `## Threat intel and frameworks`,
+              `- [ ] [OWASP GenAI Security Project resources](https://genai.owasp.org/resources/)`,
+              `- [ ] [Cloud Security Alliance AI blog](https://cloudsecurityalliance.org/blog)`,
+              ``,
+              `## Benchmarks and tooling`,
+              `- [ ] [UK AISI Inspect evals](https://ukgovernmentbeis.github.io/inspect_evals/)`,
+              `- [ ] [GitHub topic: multi-agent](https://github.com/topics/multi-agent)`,
+              `- [ ] [GitHub topic: multi-agent-systems](https://github.com/topics/multi-agent-systems)`,
+              ``,
+              `## Triage rules`,
+              `Apply the criteria in CONTRIBUTING.md: technically credible, documented, maintained or historically important, meaningfully distinct, useful to practitioners. Prefer depth over hype.`
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Resource radar: curation sweep for ${month}`,
+              body,
+              labels: ['resource-radar', 'maintenance']
+            });

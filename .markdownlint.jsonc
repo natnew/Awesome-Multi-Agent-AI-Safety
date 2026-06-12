@@ -1,0 +1,12 @@
+{
+  // Markdown style rules for the list. Enforced by `npm run lint` and CI.
+  "default": true,
+  // The list intentionally uses long single-line entries.
+  "MD013": false,
+  // Allow duplicate sibling headings if sections ever share names in templates.
+  "MD024": { "siblings_only": true },
+  // Badge images sit directly under the blockquote tagline.
+  "MD041": false,
+  // Bare URLs are never allowed — entries must be named links.
+  "MD034": true
+}

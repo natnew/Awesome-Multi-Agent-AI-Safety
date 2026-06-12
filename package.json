@@ -1,0 +1,17 @@
+{
+  "name": "awesome-multi-agent-ai-safety",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Validation tooling for the Awesome Multi-Agent AI Safety list.",
+  "scripts": {
+    "lint": "markdownlint-cli2 \"*.md\" \".github/*.md\"",
+    "format": "prettier --check \"*.md\" \".github/*.md\"",
+    "check": "node scripts/check-consistency.mjs",
+    "validate": "npm run lint && npm run check"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.8.4"
+  }
+}
