@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of June 12, 2026, the curated sections below contain 35 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 36 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -99,6 +99,7 @@ Frameworks for building multi-agent systems with bounded, observable collaborati
 - **[AG2](https://github.com/ag2ai/ag2)** - Successor ecosystem for AutoGen-style collaborative agents and workflows. *Framework / multi-agent*
 - **[LangGraph](https://github.com/langchain-ai/langgraph)** - Stateful graph-based orchestration for multi-step and multi-agent workflows. *Framework / state machines*
 - **[CAMEL](https://arxiv.org/abs/2303.17760)** - Early role-playing framework for studying coordination and emergent behaviour between communicating agents. *Paper / coordination*
+- **[SearchOS-V1](https://arxiv.org/abs/2607.15257)** - Multi-agent information-seeking framework that externalises search progress into shared evidence graphs, coverage maps, frontier tasks, and failure memory for more inspectable collaboration. *Paper / shared state*
 
 ---
 
