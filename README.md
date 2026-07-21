@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 36 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 37 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -85,6 +85,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Melting Pot](https://github.com/google-deepmind/meltingpot)** - Test-scenario suite measuring how multi-agent populations generalise to novel social situations and unfamiliar co-players. *Environment / multi-agent RL*
 - **[OASIS](https://github.com/camel-ai/oasis)** - Open social-media simulator supporting up to one million LLM-driven agents for studying population-scale dynamics. *Simulator / population scale*
 - **[GovSim](https://arxiv.org/abs/2404.16698)** - Shared-resource simulation showing when societies of LLM agents achieve or fail at sustainable cooperation. *Environment / cooperation*
+- **[Institutional Red-Teaming](https://arxiv.org/abs/2607.07695)** - Benchmark methodology for testing how deployment rules causally shape collective safety outcomes across multi-agent AI populations. *Paper / deployment evaluation*
 - **[Generative Agents](https://arxiv.org/abs/2304.03442)** - Foundational simulation of a believable agent society with memory, planning, and reflection. *Paper / agent societies*
 - **[Generative Agent Simulations of 1,000 People](https://arxiv.org/abs/2411.10109)** - Stanford architecture simulating the attitudes and behaviours of 1,052 real individuals from qualitative interviews, a foundation for human-grounded simulation. *Paper / human-grounded simulation*
 - **[SocioVerse](https://arxiv.org/abs/2504.10157)** - World model for social simulation aligning LLM agent populations with a pool of ten million real-world user profiles. *Simulator / population realism*
