@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 48 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 49 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -91,6 +91,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Concordia](https://github.com/google-deepmind/concordia)** - Google DeepMind library for generative agent-based models simulating agent interactions in grounded social and digital environments. *Environment / generative ABM*
 - **[Melting Pot](https://github.com/google-deepmind/meltingpot)** - Test-scenario suite measuring how multi-agent populations generalise to novel social situations and unfamiliar co-players. *Environment / multi-agent RL*
 - **[OASIS](https://github.com/camel-ai/oasis)** - Open social-media simulator supporting up to one million LLM-driven agents for studying population-scale dynamics. *Simulator / population scale*
+- **[MoltNet: Understanding Social Behavior of AI Agents in the Agent-Native MoltBook](https://arxiv.org/abs/2602.13458)** - Empirical study of 148K AI agents on MoltBook examining incentives, norm formation, behavioural drift, emotion, and contagion in an agent-native social network. *Paper / population-scale social dynamics*
 - **[GovSim](https://arxiv.org/abs/2404.16698)** - Shared-resource simulation showing when societies of LLM agents achieve or fail at sustainable cooperation. *Environment / cooperation*
 - **[Human Values Matter: Investigating How Misalignment Shapes Collective Behaviors in LLM Agent Communities](https://arxiv.org/abs/2604.05339)** - Introduces CIVA, a controlled social-science-grounded environment for testing how value misspecification affects agent communities, including catastrophic collapse, deception, and emergent power-seeking. *Environment / collective value alignment*
 - **[Increasing Intelligence in AI Agents Can Worsen Collective Outcomes](https://arxiv.org/abs/2603.12129)** - Study of AI-agent populations showing how diversity, reinforcement learning, tribe formation, and resource scarcity shape overload risks under constrained capacity. *Paper / collective failure*
