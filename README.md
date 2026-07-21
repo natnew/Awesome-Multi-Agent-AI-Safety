@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 51 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 52 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -99,6 +99,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Evaluating Collective Behaviour of Hundreds of LLM Agents](https://arxiv.org/abs/2602.16662)** - Framework evaluating model-generated strategies across hundreds of agents in social dilemmas to study cultural selection and harmful collective equilibria. *Paper / population evaluation*
 - **[Collective Alignment in LLM Multi-Agent Systems](https://arxiv.org/abs/2605.10528)** - Applies statistical-physics methods to lattice-based LLM populations, separating social conformity from intrinsic model bias and producing quantitative fingerprints for collective alignment and consensus reliability. *Paper / collective dynamics*
 - **[Institutional Red-Teaming](https://arxiv.org/abs/2607.07695)** - Benchmark methodology for testing how deployment rules causally shape collective safety outcomes across multi-agent AI populations. *Paper / deployment evaluation*
+- **[TAMAS: Benchmarking Adversarial Risks in Multi-Agent LLM Systems](https://arxiv.org/abs/2511.05269)** - Benchmark evaluating adversarial risks across multi-agent LLM scenarios, attack types, tool use, and orchestration configurations. *Benchmark / adversarial robustness*
 - **[A Unified Framework for the Evaluation of LLM Agentic Capabilities](https://github.com/whfeLingYu/A-Unified-Framework-for-the-Evaluation-of-LLM-Agentic-Capabilities)** - Sandboxed evaluation framework standardising agent benchmarks through shared instruction, tool, environment, and agent-blueprint interfaces, including multi-agent benchmarks and failure attribution. *Framework / evaluation*
 - **[Generative Agents](https://arxiv.org/abs/2304.03442)** - Foundational simulation of a believable agent society with memory, planning, and reflection. *Paper / agent societies*
 - **[Generative Agent Simulations of 1,000 People](https://arxiv.org/abs/2411.10109)** - Stanford architecture simulating the attitudes and behaviours of 1,052 real individuals from qualitative interviews, a foundation for human-grounded simulation. *Paper / human-grounded simulation*
