@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 39 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 40 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -64,6 +64,7 @@ Resources on the primitives that trustworthy agent-to-agent interaction depends 
 - **[Infrastructure for AI Agents](https://arxiv.org/abs/2501.10114)** - Technical systems and protocols for attributing agent actions, shaping interactions, and detecting harmful behaviour. *Paper / infrastructure*
 - **[Authenticated Delegation and Authorized AI Agents](https://arxiv.org/abs/2501.09674)** - OAuth and OpenID Connect extensions for scoped delegation to agents with clear chains of accountability. *Paper / authentication*
 - **[Scaling Trust](https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/)** - ARIA programme building open tooling and foundational research for secure coordination between agents in adversarial settings. *Research programme / coordination*
+- **[Can Trustless Agents Be Trusted?](https://arxiv.org/abs/2606.26028)** - Empirical study of ERC-8004 identity and reputation registries showing weak evidence links, inactive registrations, low-cost reputation manipulation, and coordinated Sybil activity. *Paper / trust infrastructure*
 
 ---
 
