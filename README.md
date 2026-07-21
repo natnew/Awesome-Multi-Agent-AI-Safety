@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 42 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 43 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -76,6 +76,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[AI Control: Improving Safety Despite Intentional Subversion](https://arxiv.org/abs/2312.06942)** - Control protocols that stay safe even when capable models actively try to subvert oversight. *Paper / control*
 - **[ControlArena](https://github.com/UKGovernmentBEIS/control-arena)** - UK AISI library for designing and running AI control experiments that test protocols against subversion. *Open-source / control evaluations*
 - **[SHADE-Arena](https://www.anthropic.com/research/shade-arena-sabotage-monitoring)** - Evaluation environment measuring whether agents can pursue hidden sabotage goals while evading an AI monitor. *Evaluation / sabotage and monitoring*
+- **[Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors](https://arxiv.org/abs/2607.07368)** - Introduces FakeLab for evaluating coordinated attacks distributed across multiple agent instances and the limits of per-instance monitoring. *Paper / distributed control*
 
 ---
 
