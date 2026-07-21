@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 49 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 50 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -96,6 +96,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Human Values Matter: Investigating How Misalignment Shapes Collective Behaviors in LLM Agent Communities](https://arxiv.org/abs/2604.05339)** - Introduces CIVA, a controlled social-science-grounded environment for testing how value misspecification affects agent communities, including catastrophic collapse, deception, and emergent power-seeking. *Environment / collective value alignment*
 - **[Increasing Intelligence in AI Agents Can Worsen Collective Outcomes](https://arxiv.org/abs/2603.12129)** - Study of AI-agent populations showing how diversity, reinforcement learning, tribe formation, and resource scarcity shape overload risks under constrained capacity. *Paper / collective failure*
 - **[Evaluating Collective Behaviour of Hundreds of LLM Agents](https://arxiv.org/abs/2602.16662)** - Framework evaluating model-generated strategies across hundreds of agents in social dilemmas to study cultural selection and harmful collective equilibria. *Paper / population evaluation*
+- **[Collective Alignment in LLM Multi-Agent Systems](https://arxiv.org/abs/2605.10528)** - Applies statistical-physics methods to lattice-based LLM populations, separating social conformity from intrinsic model bias and producing quantitative fingerprints for collective alignment and consensus reliability. *Paper / collective dynamics*
 - **[Institutional Red-Teaming](https://arxiv.org/abs/2607.07695)** - Benchmark methodology for testing how deployment rules causally shape collective safety outcomes across multi-agent AI populations. *Paper / deployment evaluation*
 - **[A Unified Framework for the Evaluation of LLM Agentic Capabilities](https://github.com/whfeLingYu/A-Unified-Framework-for-the-Evaluation-of-LLM-Agentic-Capabilities)** - Sandboxed evaluation framework standardising agent benchmarks through shared instruction, tool, environment, and agent-blueprint interfaces, including multi-agent benchmarks and failure attribution. *Framework / evaluation*
 - **[Generative Agents](https://arxiv.org/abs/2304.03442)** - Foundational simulation of a believable agent society with memory, planning, and reflection. *Paper / agent societies*
