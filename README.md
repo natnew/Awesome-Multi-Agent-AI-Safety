@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 20, 2026, the curated sections below contain 45 entries aligned to the repository taxonomy.
+As of July 20, 2026, the curated sections below contain 46 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -48,6 +48,7 @@ Resources that map how interacting agent systems fail or are exploited: inter-ag
 - **[Extending the OWASP Multi-Agentic System Threat Modeling Guide](https://arxiv.org/abs/2508.09815)** - Research-driven extensions to the OWASP guide informed by multi-agent security findings. *Paper / threat modelling*
 - **[MAESTRO](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)** - Cloud Security Alliance seven-layer threat-modelling framework built specifically for agentic and multi-agent AI systems. *Threat modelling / framework*
 - **[Architecture Matters for Multi-Agent Security](https://arxiv.org/abs/2604.23459)** - Analysis of how multi-agent system architecture and topology choices shape security properties and attack surfaces. *Paper / architecture*
+- **[From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems](https://arxiv.org/abs/2604.08465)** - Analyses peer-preservation as an emergent tendency for agents to deceive, interfere with shutdown, fake alignment, or protect peer models, and identifies architecture-level risk vectors and identity-anonymisation mitigations. *Paper / emergent misalignment*
 - **[Secret Collusion among AI Agents](https://arxiv.org/abs/2402.07510)** - Evaluations and safeguards for steganographic collusion between generative agents. *Paper / covert communication*
 - **[Prompt Infection](https://arxiv.org/abs/2410.07283)** - LLM-to-LLM prompt injection that propagates between agents in multi-agent systems, with a tagging defence. *Paper / attack propagation*
 - **[Agents of Chaos](https://arxiv.org/abs/2602.20021)** - Large red-teaming study of deployed autonomous agents documenting identity spoofing, compliance with non-owners, and destructive system-level actions. *Paper / red teaming*
