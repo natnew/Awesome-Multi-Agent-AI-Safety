@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 59 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 60 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -98,6 +98,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[MoltNet: Understanding Social Behavior of AI Agents in the Agent-Native MoltBook](https://arxiv.org/abs/2602.13458)** - Empirical study of 148K AI agents on MoltBook examining incentives, norm formation, behavioural drift, emotion, and contagion in an agent-native social network. *Paper / population-scale social dynamics*
 - **[GovSim](https://arxiv.org/abs/2404.16698)** - Shared-resource simulation showing when societies of LLM agents achieve or fail at sustainable cooperation. *Environment / cooperation*
 - **[Draining the Energy Commons: Self-Defeating Over-Appropriation as a Coordination Failure in Agentic LLM Collectives](https://arxiv.org/abs/2607.22188)** - Studies how collectives of agentic LLMs over-appropriate a shared energy resource, exposing coordination failures that deplete the commons and undermine their own outcomes. *Paper / resource coordination*
+- **[NVIDIA Labs Object-Oriented Agents (NOOA)](https://github.com/NVIDIA-NeMo/labs-OO-Agents)** - Research framework for modelling agents, environments, resources, and interactions as composable objects, supporting reproducible multi-agent experiments on coordination failures such as shared-resource depletion. *Framework / multi-agent simulation*
 - **[Not Birds of a Feather: Personality-Based Partner Selection in LLM Agents](https://arxiv.org/abs/2607.19785)** - Studies personality-based partner selection in an energy-commons simulation, showing how agents’ partner preferences shape team composition, resource use, and collective outcomes. *Paper / partner selection*
 - **[Human Values Matter: Investigating How Misalignment Shapes Collective Behaviors in LLM Agent Communities](https://arxiv.org/abs/2604.05339)** - Introduces CIVA, a controlled social-science-grounded environment for testing how value misspecification affects agent communities, including catastrophic collapse, deception, and emergent power-seeking. *Environment / collective value alignment*
 - **[Increasing Intelligence in AI Agents Can Worsen Collective Outcomes](https://arxiv.org/abs/2603.12129)** - Study of AI-agent populations showing how diversity, reinforcement learning, tribe formation, and resource scarcity shape overload risks under constrained capacity. *Paper / collective failure*
