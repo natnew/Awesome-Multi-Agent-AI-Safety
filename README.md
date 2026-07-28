@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 62 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 63 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -47,6 +47,7 @@ Resources that map how interacting agent systems fail or are exploited: inter-ag
 - **[OWASP Multi-Agentic System Threat Modeling Guide](https://genai.owasp.org/resource/multi-agentic-system-threat-modeling-guide-v1-0/)** - Applies OWASP's agentic threat taxonomy to real-world multi-agent systems through MAESTRO-based worked examples. *Threat modelling / practitioner guide*
 - **[Extending the OWASP Multi-Agentic System Threat Modeling Guide](https://arxiv.org/abs/2508.09815)** - Research-driven extensions to the OWASP guide informed by multi-agent security findings. *Paper / threat modelling*
 - **[MAESTRO](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)** - Cloud Security Alliance seven-layer threat-modelling framework built specifically for agentic and multi-agent AI systems. *Threat modelling / framework*
+- **[Microsoft MDASH](https://news.microsoft.com/build-2026-book-of-news/)** - Microsoft security framework for discovering, assessing, and mitigating risks that emerge from communication and shared context across multi-agent systems. *Security framework / risk assessment*
 - **[Architecture Matters for Multi-Agent Security](https://arxiv.org/abs/2604.23459)** - Analysis of how multi-agent system architecture and topology choices shape security properties and attack surfaces. *Paper / architecture*
 - **[ChannelGuard: Safe Models Do Not Compose into Safe Multi-Agent Systems](https://arxiv.org/abs/2607.19430)** - Demonstrates how individually safe models can produce unsafe collective behaviour through inter-agent communication, motivating system-level evaluation and channel-aware safeguards. *Paper / compositional safety*
 - **[From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems](https://arxiv.org/abs/2604.08465)** - Analyses peer-preservation as an emergent tendency for agents to deceive, interfere with shutdown, fake alignment, or protect peer models, and identifies architecture-level risk vectors and identity-anonymisation mitigations. *Paper / emergent misalignment*
