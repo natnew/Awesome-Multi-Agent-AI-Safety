@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 21, 2026, the curated sections below contain 54 entries aligned to the repository taxonomy.
+As of July 21, 2026, the curated sections below contain 55 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -99,6 +99,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Increasing Intelligence in AI Agents Can Worsen Collective Outcomes](https://arxiv.org/abs/2603.12129)** - Study of AI-agent populations showing how diversity, reinforcement learning, tribe formation, and resource scarcity shape overload risks under constrained capacity. *Paper / collective failure*
 - **[Evaluating Collective Behaviour of Hundreds of LLM Agents](https://arxiv.org/abs/2602.16662)** - Framework evaluating model-generated strategies across hundreds of agents in social dilemmas to study cultural selection and harmful collective equilibria. *Paper / population evaluation*
 - **[Collective Alignment in LLM Multi-Agent Systems](https://arxiv.org/abs/2605.10528)** - Applies statistical-physics methods to lattice-based LLM populations, separating social conformity from intrinsic model bias and producing quantitative fingerprints for collective alignment and consensus reliability. *Paper / collective dynamics*
+- **[Reliability-Contagion Feasibility in LLM Multi-Agent Networks](https://arxiv.org/search/?query=%22Reliability-Contagion+Feasibility+in+LLM+Multi-Agent+Networks%22&searchtype=title)** - Examines whether reliable behaviour can propagate through networks of interacting LLM agents, informing how population structure may amplify or contain agent failures. *Paper / reliability contagion*
 - **[Institutional Red-Teaming](https://arxiv.org/abs/2607.07695)** - Benchmark methodology for testing how deployment rules causally shape collective safety outcomes across multi-agent AI populations. *Paper / deployment evaluation*
 - **[TAMAS: Benchmarking Adversarial Risks in Multi-Agent LLM Systems](https://arxiv.org/abs/2511.05269)** - Benchmark evaluating adversarial risks across multi-agent LLM scenarios, attack types, tool use, and orchestration configurations. *Benchmark / adversarial robustness*
 - **[Same Game, Different Story: A Minimal Conservative Strategic Robustness Benchmark for Large Language Model Agents](https://arxiv.org/search/?query=%22Same+Game%2C+Different+Story%22&searchtype=title)** - Benchmark tests whether LLM agents preserve strategic choices when identical games are presented through different narratives, exposing framing-sensitive behaviour relevant to reliable multi-agent evaluation. *Benchmark / strategic robustness*
