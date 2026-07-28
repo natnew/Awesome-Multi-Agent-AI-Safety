@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 64 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 65 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -33,6 +33,7 @@ As of July 28, 2026, the curated sections below contain 64 entries aligned to th
 High-level resources that define the multi-agent safety problem space and its research agenda.
 
 - **[Open Challenges in Multi-Agent Security](https://arxiv.org/abs/2505.02077)** - Field-defining survey of securing networks of decentralised agents, taxonomising threats from secret collusion to swarm attacks and setting a unified research agenda. *Survey / field agenda*
+- **[Security Considerations for Multi-agent Systems](https://arxiv.org/abs/2603.09002)** - Examines security risks arising from interactions among autonomous agents and outlines system-level considerations for threat modelling, communication, coordination, and governance across multi-agent deployments. *Paper / security framing*
 - **[Multi-Agent Risks from Advanced AI](https://arxiv.org/abs/2502.14143)** - Cooperative AI Foundation report mapping miscoordination, conflict, and collusion failure modes alongside seven cross-cutting risk factors. *Report / risk taxonomy*
 - **[Open Problems in Cooperative AI](https://arxiv.org/abs/2012.08630)** - Foundational agenda for building AI systems that cooperate safely with other machines and humans. *Paper / foundational*
 - **[Distributional AGI Safety](https://arxiv.org/abs/2512.16856)** - Google DeepMind work on general capability emerging from coordinated networks of specialised agents, and the safeguards that hypothesis demands. *Paper / collective capability*
