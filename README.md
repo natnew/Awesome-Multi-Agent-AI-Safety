@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 60 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 61 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -61,6 +61,7 @@ Resources that map how interacting agent systems fail or are exploited: inter-ag
 
 Resources on the primitives that trustworthy agent-to-agent interaction depends on: identity, authentication, delegation, provenance, and reputation.
 
+- **[SPIFFE](https://github.com/spiffe/spiffe)** - Cloud Native Computing Foundation specification for issuing cryptographically verifiable workload identities, providing authentication primitives that agent platforms can use to establish trust across heterogeneous infrastructure. *Standard / workload identity*
 - **[A2A Protocol](https://a2a-protocol.org/latest/)** - Linux Foundation open standard for secure communication and task delegation between agents from different vendors. *Protocol / interoperability*
 - **[Threat Modeling the A2A Protocol](https://cloudsecurityalliance.org/blog/2025/04/30/threat-modeling-google-s-a2a-protocol-with-the-maestro-framework)** - Cloud Security Alliance analysis of agent-to-agent protocol risks using the MAESTRO framework. *Threat model / protocol security*
 - **[IDs for AI Systems](https://arxiv.org/abs/2406.12137)** - Proposal for instance-level identifiers that support accountability, certification checks, and incident attribution. *Paper / identity*
