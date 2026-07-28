@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 65 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 66 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -97,6 +97,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 
 Reproducible environments for studying how populations of agents behave, cooperate, and fail at scale.
 
+- **[Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems](https://arxiv.org/abs/2602.15198)** - Introduces an evaluation environment for eliciting collusion in cooperative agent teams and auditing whether monitors can identify coordinated rule-breaking from their interactions. *Paper / collusion evaluation*
 - **[Concordia](https://github.com/google-deepmind/concordia)** - Google DeepMind library for generative agent-based models simulating agent interactions in grounded social and digital environments. *Environment / generative ABM*
 - **[Melting Pot](https://github.com/google-deepmind/meltingpot)** - Test-scenario suite measuring how multi-agent populations generalise to novel social situations and unfamiliar co-players. *Environment / multi-agent RL*
 - **[OASIS](https://github.com/camel-ai/oasis)** - Open social-media simulator supporting up to one million LLM-driven agents for studying population-scale dynamics. *Simulator / population scale*
