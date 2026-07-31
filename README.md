@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 66 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 68 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -66,6 +66,7 @@ Resources on the primitives that trustworthy agent-to-agent interaction depends 
 - **[SPIFFE](https://github.com/spiffe/spiffe)** - Cloud Native Computing Foundation specification for issuing cryptographically verifiable workload identities, providing authentication primitives that agent platforms can use to establish trust across heterogeneous infrastructure. *Standard / workload identity*
 - **[SPIRE](https://github.com/spiffe/spire)** - Open-source implementation of SPIFFE that attests workloads and issues short-lived cryptographic identities, enabling agent platforms to authenticate components and enforce trust across heterogeneous infrastructure. *Open-source / identity infrastructure*
 - **[A2A Protocol](https://a2a-protocol.org/latest/)** - Linux Foundation open standard for secure communication and task delegation between agents from different vendors. *Protocol / interoperability*
+- **[AgentRadio](https://arxiv.org/abs/2607.28430)** - Open-source observability framework for recording and inspecting communication between agents in multi-agent systems. *Framework / communication observability*
 - **[Threat Modeling the A2A Protocol](https://cloudsecurityalliance.org/blog/2025/04/30/threat-modeling-google-s-a2a-protocol-with-the-maestro-framework)** - Cloud Security Alliance analysis of agent-to-agent protocol risks using the MAESTRO framework. *Threat model / protocol security*
 - **[IDs for AI Systems](https://arxiv.org/abs/2406.12137)** - Proposal for instance-level identifiers that support accountability, certification checks, and incident attribution. *Paper / identity*
 - **[Infrastructure for AI Agents](https://arxiv.org/abs/2501.10114)** - Technical systems and protocols for attributing agent actions, shaping interactions, and detecting harmful behaviour. *Paper / infrastructure*
@@ -89,6 +90,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[Norm Enforcement for AI Agents](https://yaowenye.com/norm-enforcement)** - Studies enforcement mechanisms for competitive language-model agents and reliability-aware escalating penalties for repeated norm violations. *Paper / norm enforcement*
 - **[When Agents Go Rogue](https://arxiv.org/abs/2607.06807)** - Introduces AcMAS for detecting semantically stealthy malicious behaviour from agents' internal reasoning states and guiding restoration of compromised agents. *Paper / malicious-agent detection*
 - **[A Sober Look at Agentic Misalignment in Automated Workflows](https://arxiv.org/abs/2605.24197)** - Formally models agentic misalignment as optimisation of implicit proxy utilities and introduces Agentic Evidence Attribution for identifying and correcting failures during multi-agent collaboration. *Paper / evidence-based alignment*
+- **[SafeFlow](https://github.com/Haowen-academic/SafeFlow)** - Framework for evaluating and enforcing safety constraints across multi-agent workflow execution. *Framework / workflow safety*
 - **[Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization](https://arxiv.org/abs/2603.04378)** - Introduces trajectory-aligned regularisation for controlling policy sensitivity along adversarial optimisation directions in agentic minimax training. *Paper / adversarial stability*
 
 ---
