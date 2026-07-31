@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 67 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 68 entries aligned to the repository taxonomy.
 
 ## Contents
 
