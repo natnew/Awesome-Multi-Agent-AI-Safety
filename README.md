@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 66 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 67 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -89,6 +89,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[Norm Enforcement for AI Agents](https://yaowenye.com/norm-enforcement)** - Studies enforcement mechanisms for competitive language-model agents and reliability-aware escalating penalties for repeated norm violations. *Paper / norm enforcement*
 - **[When Agents Go Rogue](https://arxiv.org/abs/2607.06807)** - Introduces AcMAS for detecting semantically stealthy malicious behaviour from agents' internal reasoning states and guiding restoration of compromised agents. *Paper / malicious-agent detection*
 - **[A Sober Look at Agentic Misalignment in Automated Workflows](https://arxiv.org/abs/2605.24197)** - Formally models agentic misalignment as optimisation of implicit proxy utilities and introduces Agentic Evidence Attribution for identifying and correcting failures during multi-agent collaboration. *Paper / evidence-based alignment*
+- **[SafeFlow](https://github.com/Haowen-academic/SafeFlow)** - Framework for evaluating and enforcing safety constraints across multi-agent workflow execution. *Framework / workflow safety*
 - **[Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization](https://arxiv.org/abs/2603.04378)** - Introduces trajectory-aligned regularisation for controlling policy sensitivity along adversarial optimisation directions in agentic minimax training. *Paper / adversarial stability*
 
 ---
