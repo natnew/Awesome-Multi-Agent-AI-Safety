@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 68 entries aligned to the repository taxonomy.
+As of July 28, 2026, the curated sections below contain 69 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -81,6 +81,7 @@ Resources on the primitives that trustworthy agent-to-agent interaction depends 
 
 Methods for detecting, attributing, and intervening on unsafe behaviour across deployed agents, designed to stay robust when agents actively evade them.
 
+- **[Agentic Oversight via Dialectic Reasoning](https://aclanthology.org/2026.acl-long.1143/)** - Introduces a multi-agent dialectic framework in which opposing reasoning agents critique and refine responses to support oversight of agentic systems. *Paper / dialectic oversight*
 - **[AI Control: Improving Safety Despite Intentional Subversion](https://arxiv.org/abs/2312.06942)** - Control protocols that stay safe even when capable models actively try to subvert oversight. *Paper / control*
 - **[ControlArena](https://github.com/UKGovernmentBEIS/control-arena)** - UK AISI library for designing and running AI control experiments that test protocols against subversion. *Open-source / control evaluations*
 - **[SHADE-Arena](https://www.anthropic.com/research/shade-arena-sabotage-monitoring)** - Evaluation environment measuring whether agents can pursue hidden sabotage goals while evading an AI monitor. *Evaluation / sabotage and monitoring*
