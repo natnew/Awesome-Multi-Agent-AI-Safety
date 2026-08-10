@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of July 28, 2026, the curated sections below contain 72 entries aligned to the repository taxonomy.
+As of August 10, 2026, the curated sections below contain 73 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -91,6 +91,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[Harnessing Disagreement: Detecting Correlated Agreement Blindness in Multi-Agent Triage](https://arxiv.org/abs/2607.19899)** - Introduces a disagreement-based method for detecting correlated agreement blindness, where consensus among triage agents can conceal shared errors and undermine collective oversight. *Paper / collective oversight*
 - **[The Consistency Illusion: How Multi-Agent Debate Hides Reasoning Misalignment](https://arxiv.org/abs/2606.08457)** - Introduces Cross-Agent Reasoning Alignment (CARA) to measure reasoning-level misalignment concealed by answer-level consensus in multi-agent debate. *Paper / reasoning alignment*
 - **[Peacemaker or Troublemaker: How Sycophancy Shapes Multi-Agent Debate](https://arxiv.org/abs/2509.23055)** - Identifies inter-agent sycophancy as a failure mode in which debating agents abandon justified positions and converge prematurely. *Paper / debate alignment*
+- **[Stay Focused: Problem Drift in Multi-Agent Debate](https://aclanthology.org/2026.findings-eacl.268/)** - Analyses how problem drift emerges during multi-agent debate and develops mechanisms to detect and mitigate it. *Paper / debate reliability*
 - **[Norm Enforcement for AI Agents](https://yaowenye.com/norm-enforcement)** - Studies enforcement mechanisms for competitive language-model agents and reliability-aware escalating penalties for repeated norm violations. *Paper / norm enforcement*
 - **[When Agents Go Rogue](https://arxiv.org/abs/2607.06807)** - Introduces AcMAS for detecting semantically stealthy malicious behaviour from agents' internal reasoning states and guiding restoration of compromised agents. *Paper / malicious-agent detection*
 - **[A Sober Look at Agentic Misalignment in Automated Workflows](https://arxiv.org/abs/2605.24197)** - Formally models agentic misalignment as optimisation of implicit proxy utilities and introduces Agentic Evidence Attribution for identifying and correcting failures during multi-agent collaboration. *Paper / evidence-based alignment*
