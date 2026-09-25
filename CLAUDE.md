@@ -24,7 +24,7 @@ When several candidates need vetting (a sweep, a multi-entry PR), run one `entry
 - **Scope is decisive.** Primary subject must be multi-agent. Single-agent agentic safety (prompt-injection defence, guardrails, sandboxing, individual-agent benchmarks) is out of scope however good; point to "Related repositories".
 - **Entry format**, matched exactly, separator is a plain hyphen:
   `- **[Name](https://link)** - One-sentence description ending with a full stop. *Type / topic*`
-  Tags: two, italic, ` / `-separated; the first is a capitalised resource type (`Paper`, `Survey`, `Simulator`, `Protocol`, ...), the second lowercase apart from proper nouns. en-GB spelling. No hype words, no unsupported ranking or adoption claims, do not start with "A"/"An".
+  Tags: two, italic, ` / `-separated; the first is a capitalised resource type (`Paper`, `Survey`, `Simulator`, `Protocol`, ...), the second lowercase apart from proper nouns.
 - **Header line** `As of <Month D, YYYY>, the curated sections below contain N entries ...`: every entry added or removed updates **both** the count and the date (today, US-style month-day as already written). `npm run check` fails on a count mismatch; the date is enforced only by precedent.
 - **Links are verified, never guessed.** Fetch every URL. Papers use `https://arxiv.org/abs/<id>` (not PDF) or the official publisher page. If a fetch fails or is blocked, report the entry as unverified; do not add it on inference.
 - One best-fit section per resource; never duplicate across sections. `npm run check` catches duplicate URLs only, so also grep for the resource name.
@@ -40,7 +40,7 @@ npm run validate   # lint + check; must pass before any commit
 - `npm run lint` runs markdownlint on **every root `*.md`** (including this file and `AGENTS.md`) and `.github/*.md`, not `.claude/`. Config: `.markdownlint.jsonc`.
 - `npm run check` verifies the header count, Contents anchors, and duplicate URLs.
 - `npm run format` (Prettier check) is not part of `validate` or CI and already reports existing files; do not run `prettier --write`.
-- CI: `validate.yml` on markdown changes; `link-check.yml` (lychee, README only, fails PRs on broken links, opens a `link-rot` issue weekly); `resource-radar.yml` opens the monthly sweep issue; `claude.yml` responds to `@claude` mentions.
+- CI: `validate.yml` on markdown changes; `link-check.yml` (lychee, README only, fails PRs on broken links, opens a `link-rot` issue weekly); `resource-radar.yml` opens the monthly sweep issue.
 
 ## Boundaries
 
