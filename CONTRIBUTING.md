@@ -28,7 +28,11 @@ Please avoid submitting entries that are:
 
 Use this format:
 
-- **[Name](link)** - One-sentence description. *Optional metadata*
+```markdown
+- **[Name](https://link)** - One-sentence description ending with a full stop. *Type / topic*
+```
+
+Add two italic tags separated by ` / `: first a capitalised resource type (for example `Paper`, `Survey`, `Simulator`, `Protocol`), then a lowercase topic apart from proper nouns (for example `*Paper / red teaming*`).
 
 Keep descriptions:
 
@@ -50,6 +54,8 @@ When opening a pull request:
 1. Explain what you added, removed, or changed.
 2. Say why the resource belongs in this repository.
 3. Note any link updates, category moves, or duplicate cleanup.
+4. Update the date and entry count in the README header line ("As of <Month D, YYYY>, ... contain N entries").
+5. Run `npm install` once, then `npm run validate`, and fix anything it reports.
 
 ## Editorial preference
 

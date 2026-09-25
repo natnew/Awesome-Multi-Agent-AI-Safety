@@ -30,7 +30,7 @@ Grep README.md for the URL (and obvious variants) and the resource name.
 ```
 
 - One sentence, technically precise, neutral, en-GB spelling.
-- Tags: two, lowercase apart from proper nouns, separated by ` / ` (e.g. *Paper / covert communication*, *Environment / cooperation*).
+- Tags: two, italic, separated by ` / `. The first is a capitalised resource type (`Paper`, `Survey`, `Simulator`, `Protocol`, ...); the second is a lowercase topic apart from proper nouns (e.g. *Paper / covert communication*, *Environment / cooperation*).
 - Say what the resource *is and does*, not why it is impressive.
 
 ## 5. Place it
@@ -39,9 +39,9 @@ Insert into the single best-fit section, matching the ordering convention of tha
 
 ## 6. Update the count and validate
 
-1. Increment the "contain N entries" number in the README header.
+1. In the README header line ("As of <Month D, YYYY>, ... contain N entries"), increment N and set the date to today in the same format.
 2. Run `npm run validate` — it checks lint, the count, TOC anchors, and duplicate URLs. Fix anything it reports.
 
 ## 7. Report
 
-Tell the user: the entry line as added, the section, the new total count, and that validation passed.
+Tell the user: the entry line as added, the section, the new total count and header date, and that validation passed.

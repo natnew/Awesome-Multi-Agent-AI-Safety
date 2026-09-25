@@ -43,7 +43,7 @@ Before reviewing or editing, read in this order:
 
 1. `README.md` — scope, taxonomy, section structure, entry format, and existing examples
 2. `CONTRIBUTING.md` — inclusion criteria, what to avoid, and entry style
-3. `CLAUDE.md` — the pointer to this file and the repository's key constraints
+3. `CLAUDE.md` — the Claude-specific layer on top of this file: routing, key invariants, and commands
 4. `.claude/agents/entry-reviewer.md` — the scope and inclusion checks applied to new entries
 5. `.claude/skills/add-entry/SKILL.md` — the verified procedure for adding an entry
 6. `.claude/skills/curation-sweep/SKILL.md` — the procedure for triaging the resource-radar issue
@@ -58,7 +58,7 @@ Do not assume the generic awesome-list pattern overrides this repository's exist
 * The curated sections are: Foundations and framing; Threat models and attacks; Agent identity, trust, and interaction infrastructure; Oversight and control of agent populations; Multi-agent environments and simulation testbeds; Multi-agent frameworks and orchestration; Communities, organisations, and ongoing work.
 * All curated sections use a single bullet style with the same entry format. Match it exactly.
 * Each section opens with one line of explanatory text before its entries. Preserve it.
-* The intro header carries a running entry count ("contain N entries"). `scripts/check-consistency.mjs` counts every `- **[` line in sections before "## Contributing" and fails if the header disagrees.
+* The intro header carries a date and a running entry count ("As of <Month D, YYYY>, ... contain N entries"). Every entry added or removed updates both. `scripts/check-consistency.mjs` counts every `- **[` line in sections before "## Contributing" and fails if the count disagrees; the date is kept by convention.
 * Adding, renaming, or removing a section requires updating the Contents table; anchors are validated by the same script.
 * Place each entry in the single best-fit section. Never duplicate an entry across sections.
 * Prefer primary sources: official repositories, arXiv abstract pages (`https://arxiv.org/abs/<id>`), official documentation, benchmark sites, and organisation pages.
@@ -118,7 +118,8 @@ Infer format from the surrounding section before editing.
 * Preserve badges, the intro, the entry-count line, Contributing, Related repositories, and Licence.
 * Use HTTPS links and canonical names.
 * Keep descriptions to one sentence; start with a capital letter and end with a full stop.
-* Use two italic tags separated by ` / ` (e.g. `*Paper / red teaming*`).
+* Separate the linked name from the description with a plain hyphen (` - `).
+* Use two italic tags separated by ` / `: first a capitalised resource type (`Paper`, `Survey`, `Simulator`, `Protocol`, ...), then a lowercase topic apart from proper nouns (e.g. `*Paper / red teaming*`).
 * Do not use title case for descriptions.
 * Do not start descriptions with "A" or "An".
 * Do not perform broad formatting changes unless explicitly asked.
@@ -234,7 +235,7 @@ For broken-link issues:
 5. Check duplicates.
 6. Check section placement.
 7. Check the entry format, tags, and en-GB spelling.
-8. Confirm the entry-count header and Contents anchors are updated if needed.
+8. Confirm the header date and entry count, and the Contents anchors, are updated if needed.
 9. Neutralise description language where required.
 10. Decide: accept, maintainer edit, request changes, close, or park, and draft a concise maintainer comment.
 
@@ -258,7 +259,7 @@ Stop and ask the maintainer before:
 Do not edit unless explicitly instructed:
 
 * Badges and the badge row
-* The intro and entry-count line (update the count only as a direct result of an entry change)
+* The intro and entry-count line (update the date and count only as a direct result of an entry change)
 * The Contents table
 * Related repositories
 * Licence text and `LICENSE`
