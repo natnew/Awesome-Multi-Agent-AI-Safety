@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of September 22, 2026, the curated sections below contain 74 entries aligned to the repository taxonomy.
+As of October 18, 2026, the curated sections below contain 79 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -38,6 +38,7 @@ High-level resources that define the multi-agent safety problem space and its re
 - **[Multi-Agent Risks from Advanced AI](https://arxiv.org/abs/2502.14143)** - Cooperative AI Foundation report mapping miscoordination, conflict, and collusion failure modes alongside seven cross-cutting risk factors. *Report / risk taxonomy*
 - **[Open Problems in Cooperative AI](https://arxiv.org/abs/2012.08630)** - Foundational agenda for building AI systems that cooperate safely with other machines and humans. *Paper / foundational*
 - **[Distributional AGI Safety](https://arxiv.org/abs/2512.16856)** - Google DeepMind work on general capability emerging from coordinated networks of specialised agents, and the safeguards that hypothesis demands. *Paper / collective capability*
+- **[Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff](https://arxiv.org/abs/2610.12436)** - Models agent populations ecologically to show that collaboration creates a population-size threshold for capability takeoff, arguing that small-scale evaluations cannot certify safety at larger deployments. *Paper / population dynamics*
 - **[Virtual Agent Economies](https://arxiv.org/abs/2509.10147)** - Framework for analysing and governing emergent economies of transacting AI agents, including systemic-risk concerns. *Paper / agent economies*
 
 ---
@@ -54,7 +55,10 @@ Resources that map how interacting agent systems fail or are exploited: inter-ag
 - **[ChannelGuard: Safe Models Do Not Compose into Safe Multi-Agent Systems](https://arxiv.org/abs/2607.19430)** - Demonstrates how individually safe models can produce unsafe collective behaviour through inter-agent communication, motivating system-level evaluation and channel-aware safeguards. *Paper / compositional safety*
 - **[From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems](https://arxiv.org/abs/2604.08465)** - Analyses peer-preservation as an emergent tendency for agents to deceive, interfere with shutdown, fake alignment, or protect peer models, and identifies architecture-level risk vectors and identity-anonymisation mitigations. *Paper / emergent misalignment*
 - **[Secret Collusion among AI Agents](https://arxiv.org/abs/2402.07510)** - Evaluations and safeguards for steganographic collusion between generative agents. *Paper / covert communication*
+- **[Codetta: High-Capacity, Keyless, and Undetectable Multi-Agent Collusion](https://arxiv.org/abs/2609.28900)** - Steganographic protocol letting independently deployed agents running different models establish keys and exchange hidden messages without pre-shared secrets, undetectable to auditors reading the full transcript. *Paper / covert communication*
+- **[Emergent Collusion in Long-Horizon LLM Agent Interaction](https://arxiv.org/abs/2609.24967)** - Shows mutually verifying LLM agents drift into joint protocol violations over repeated episodes, with ablations tracing collusion to shared interaction history, reward structure, and peer behaviour. *Paper / emergent collusion*
 - **[Emergent Languages in Populations of Language Model Agents](https://arxiv.org/abs/2605.31170)** - Studies communication protocols proposed within MoltBook, including token-efficient codes, new natural languages, oversight-evasion proposals, and steganographic patterns. *Paper / emergent communication*
+- **[Indirect Tipping: A Social Attack Surface in AI Agent Populations](https://arxiv.org/abs/2609.25194)** - Shows adversarial minorities can overturn coordination conventions in LLM agent populations with fewer committed agents by routing through intermediate stepping-stone equilibria. *Paper / collective manipulation*
 - **[Prompt Infection](https://arxiv.org/abs/2410.07283)** - LLM-to-LLM prompt injection that propagates between agents in multi-agent systems, with a tagging defence. *Paper / attack propagation*
 - **[Agents of Chaos](https://arxiv.org/abs/2602.20021)** - Large red-teaming study of deployed autonomous agents documenting identity spoofing, compliance with non-owners, and destructive system-level actions. *Paper / red teaming*
 
@@ -95,6 +99,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[Norm Enforcement for AI Agents](https://yaowenye.com/norm-enforcement)** - Studies enforcement mechanisms for competitive language-model agents and reliability-aware escalating penalties for repeated norm violations. *Paper / norm enforcement*
 - **[When Agents Go Rogue](https://arxiv.org/abs/2607.06807)** - Introduces AcMAS for detecting semantically stealthy malicious behaviour from agents' internal reasoning states and guiding restoration of compromised agents. *Paper / malicious-agent detection*
 - **[A Sober Look at Agentic Misalignment in Automated Workflows](https://arxiv.org/abs/2605.24197)** - Formally models agentic misalignment as optimisation of implicit proxy utilities and introduces Agentic Evidence Attribution for identifying and correcting failures during multi-agent collaboration. *Paper / evidence-based alignment*
+- **[Error-Propagation Modeling for Failure Attribution in LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2610.11600)** - Introduces EMFA, which models how errors cascade through multi-agent execution logs and counterfactually verifies the decisive agent and step behind a failure. *Paper / failure attribution*
 - **[SafeFlow](https://github.com/Haowen-academic/SafeFlow)** - Research framework for building and evaluating safe multi-agent systems using taint propagation, context reconstruction, local tool checks and global validation. *Framework / workflow safety*
 - **[Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization](https://arxiv.org/abs/2603.04378)** - Introduces trajectory-aligned regularisation for controlling policy sensitivity along adversarial optimisation directions in agentic minimax training. *Paper / adversarial stability*
 
