@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of October 21, 2026, the curated sections below contain 80 entries aligned to the repository taxonomy.
+As of October 22, 2026, the curated sections below contain 81 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -103,6 +103,7 @@ Methods for detecting, attributing, and intervening on unsafe behaviour across d
 - **[Error-Propagation Modeling for Failure Attribution in LLM-Based Multi-Agent Systems](https://arxiv.org/abs/2610.11600)** - Introduces EMFA, which models how errors cascade through multi-agent execution logs and counterfactually verifies the decisive agent and step behind a failure. *Paper / failure attribution*
 - **[SafeFlow](https://github.com/Haowen-academic/SafeFlow)** - Research framework for building and evaluating safe multi-agent systems using taint propagation, context reconstruction, local tool checks and global validation. *Framework / workflow safety*
 - **[Robustness of Agentic AI Systems via Adversarially-Aligned Jacobian Regularization](https://arxiv.org/abs/2603.04378)** - Introduces trajectory-aligned regularisation for controlling policy sensitivity along adversarial optimisation directions in agentic minimax training. *Paper / adversarial stability*
+- **[Hidden Messages Between Diffusion Language Model Agents: Causal Evidence for Latent Communication](https://arxiv.org/abs/2610.28905)** - Shows causally that diffusion-LM agents pass compact messages through hidden states and that the receiving agent uses them, which text-based oversight of agent-to-agent channels would miss. *Paper / latent communication*
 
 ---
 
