@@ -12,7 +12,7 @@ This repository is a map of the multi-agent AI safety stack. It is designed for 
 
 Single-agent agentic safety — prompt-injection defence, guardrails, sandboxing, and benchmarks for individual agents — is deliberately out of scope; see [Related repositories](#related-repositories) for lists that cover it.
 
-As of October 22, 2026, the curated sections below contain 82 entries aligned to the repository taxonomy.
+As of October 23, 2026, the curated sections below contain 83 entries aligned to the repository taxonomy.
 
 ## Contents
 
@@ -134,6 +134,7 @@ Reproducible environments for studying how populations of agents behave, coopera
 - **[Generative Agent Simulations of 1,000 People](https://arxiv.org/abs/2411.10109)** - Stanford architecture simulating the attitudes and behaviours of 1,052 real individuals from qualitative interviews, a foundation for human-grounded simulation. *Paper / human-grounded simulation*
 - **[SocioVerse](https://arxiv.org/abs/2504.10157)** - World model for social simulation aligning LLM agent populations with a pool of ten million real-world user profiles. *Simulator / population realism*
 - **[Fig: Automated Multiagent Behavior Elicitor](https://arxiv.org/abs/2610.28891)** - Agentic system that creates or selects game environments and applies interventions to elicit behaviours such as deception and sabotage, with agents attempting them more often than in control games. *Framework / behaviour elicitation*
+- **[PerspectiveGap: A Benchmark for Multi-Agent Orchestration Prompting](https://arxiv.org/abs/2606.08878)** - The first benchmark for multi-agent orchestration prompt writing, testing whether an orchestrator gives each sub-agent only the information fragments its role needs across 110 scenarios and 10 topologies. *Benchmark / orchestration information flow*
 
 ---
 
