@@ -80,6 +80,7 @@ Resources on the primitives that trustworthy agent-to-agent interaction depends 
 - **[AECP: Artifact-Exclusive Communication Protocol for Multi-Agent Code Generation](https://arxiv.org/abs/2610.06481)** - Restricts inter-agent exchange to structured artifacts checked by the execution harness against recorded commitments, improving multi-agent coding performance while blocking the relay of malicious instructions between agents. *Paper / verifiable coordination*
 - **[Scaling Trust](https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/)** - ARIA programme building open tooling and foundational research for secure coordination between agents in adversarial settings. *Research programme / coordination*
 - **[Can Trustless Agents Be Trusted?](https://arxiv.org/abs/2606.26028)** - Empirical study of ERC-8004 identity and reputation registries showing weak evidence links, inactive registrations, low-cost reputation manipulation, and coordinated Sybil activity. *Paper / trust infrastructure*
+- **[Know Your Agent](https://github.com/RishabhPande/know-your-agent)** - Local testbed for verifiable agent identity: Ed25519-signed credentials that bind an agent to a human principal, scope and session window, with root-to-sub-agent delegation, cross-process replay protection and a hash-chained audit log. *Open-source / agent identity*
 
 ---
 
